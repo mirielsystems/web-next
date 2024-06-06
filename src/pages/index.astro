@@ -1,0 +1,67 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+import { members } from '../data/members.js';
+import { services } from '../data/services.js';
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miriel System</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-Ctm0c9Ag7M5aUk5IQz3JUbMya/JM+1k4AsbVkZmlBnj2MBybIrF3iDF9Z7eQcbv3" crossorigin="anonymous" />
+</head>
+<body>
+  <Header />
+  <h4>Home/ホーム</h4>
+  <p>Miriel Systems へようこそ</p>
+  <p>&nbsp;</p>
+  <h3>メンバー一覧</h3>
+  <div class="card-container">
+    {members.map(member => (
+      <Card img={member.img} alt={member.alt} name={member.name} role={member.role} />
+    ))}
+  </div>
+  <p>&nbsp;</p>
+  <h3>サービス一覧</h3>
+  <div class="card-container">
+    {services.map(service => (
+      <Card img={service.img} alt={service.alt} name={service.name} description={service.description} url={service.url} />
+    ))}
+  </div>
+  <Footer />
+</body>
+</html>
+
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  h2, h3, h4, p {
+    text-align: center;
+    margin: 10px 0;
+  }
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  hr {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+  }
+  .card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+</style>

@@ -1,0 +1,17 @@
+{
+  "name": "web",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^3.0.1",
+    "astro": "^4.9.3",
+    "react": "^18.3.1"
+  }
+}
