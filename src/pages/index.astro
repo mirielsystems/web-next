@@ -37,6 +37,15 @@ import { services } from '../data/services.js';
 </body>
 </html>
 
+<script>
+  function toggleMenu() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuLinks = document.querySelector('.menu-links');
+    menuToggle.classList.toggle('open');
+    menuLinks.classList.toggle('open');
+  }
+</script>
+
 <style>
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
