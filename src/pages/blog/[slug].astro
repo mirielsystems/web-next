@@ -16,6 +16,7 @@ const { slug } = Astro.params;
 const post = await getEntryBySlug('posts', slug);
 
 if (!post) {
+  console.error(`Post not found: ${slug}`);
   throw new Error(`Post not found: ${slug}`);
 }
 ---
