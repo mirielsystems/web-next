@@ -1,0 +1,65 @@
+---
+const pageTitle = "特定商取引法に基づく表記";
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+import { members } from '../data/members.js';
+import { services } from '../data/services.js';
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{pageTitle}</title>
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+      color: #fff;
+    }
+    .logo img {
+      width: 100px;
+      height: auto;
+    }
+    .menu-links {
+      display: flex;
+    }
+    .menu-links a {
+      margin-left: 20px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .menu-links a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <Header />
+  <main class="container">
+    <h1>{pageTitle}</h1>
+    <p><strong>組織名:</strong> Miriel Systems</p>
+    <p><strong>代表者名:</strong> SAWAYAMA TENGA</p>
+    <p><strong>住所:</strong> 開示がありましたら開示いたします。</p>
+    <p><strong>電話番号:</strong> 050-5532-5437 (代表直通)</p>
+  </main>
+</body>
+</html>
